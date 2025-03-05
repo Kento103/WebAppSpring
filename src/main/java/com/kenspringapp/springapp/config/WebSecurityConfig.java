@@ -1,4 +1,4 @@
-package com.kenspringapp.springapp;
+package com.kenspringapp.springapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.kenspringapp.springapp;
+package com.kenspringapp.springapp.controller;
 
 import org.springframework.stereotype.Controller;
 

@@ -21,6 +21,7 @@ public class WebSecurityConfig {
             .requestMatchers("GET", "/user").hasAnyRole("ADMIN", "USER")
             // 管理者権限保有時のみアクセス可能(ログインが必要)
             .requestMatchers("GET", "/admin").hasAnyRole("ADMIN")
+            .requestMatchers("GET", "/userlist").hasAnyRole("ADMIN")
             // .permitAllでログインの有無に限らずページを閲覧できる。
             .requestMatchers("GET", "/").permitAll())
             // ログインが成功した際の遷移先を指定する？(第二引数はAlwaysUse:この設定を常に適用する設定。falseにすると、認証前にアクセスしたページに移動してしまう。)

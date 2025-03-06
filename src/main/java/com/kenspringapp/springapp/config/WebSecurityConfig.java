@@ -25,7 +25,10 @@ public class WebSecurityConfig {
             // .permitAllでログインの有無に限らずページを閲覧できる。
             .requestMatchers("GET", "/").permitAll())
             // ログインが成功した際の遷移先を指定する？(第二引数はAlwaysUse:この設定を常に適用する設定。falseにすると、認証前にアクセスしたページに移動してしまう。)
-            .formLogin(login -> login.defaultSuccessUrl("/user",true).permitAll())
+            .formLogin(login -> login
+                .loginPage("/login")
+                .defaultSuccessUrl("/user",true)
+                .permitAll())
             // ログアウトに関する記載
             .logout(logout -> logout
                 .logoutSuccessUrl("/"));

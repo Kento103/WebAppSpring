@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.kenspringapp.springapp.model.User;
 import com.kenspringapp.springapp.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 // ルーティング
 // Controllerクラスのアノテーション
@@ -38,4 +40,19 @@ public class PageController {
         // template配下のファイル名を指定することでViewを呼び出せる。
         return "userlist";
     }
+
+    // ログインページの表示
+    @GetMapping("/login")
+    public String getSignUp(Model model) {
+        return "login";
+    }
+
+    // FormのSubmitを押すとPostメゾットがリクエストされる。()に書かれたURLのリクエストを受け取りこのメゾットが発動する。
+    @PostMapping("/login")
+    public String postSignUp(Model model) {
+        // 画面遷移等ファイル間をまたぐ場合はリダイレクトを使用する。
+        // イメージ的にはGetメゾットを呼び出していると考えた方が良い
+        return "redirect:/userlist";
+    }
+    
 }

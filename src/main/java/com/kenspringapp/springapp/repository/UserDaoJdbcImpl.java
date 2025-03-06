@@ -9,7 +9,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.kenspringapp.springapp.repository.UserDao;
+//import com.kenspringapp.springapp.repository.UserDao;
 import com.kenspringapp.springapp.model.User;
 
 // DB接続クラス用のアノテーション
